@@ -49,3 +49,9 @@ $(document).ready(function() {
         $('#question_' + questionId).val(optionValue);
     });
 });
+
+// $('.view').click(function(){
+//     // $('#resultModal').modal('toggle');
+//     // $('#resultModal').modal('show');
+//     $("#resultModal").modal();
+// })

@@ -28,4 +28,5 @@ Route::prefix('user')->group(function () {
     Route::any('register', [userIndexController::class, 'register'])->name('user.register');
     Route::any('submit-answer', [userIndexController::class, 'submitAnswer'])->name('user.submitAnswer');
     Route::any('result/{email}', [userIndexController::class, 'result'])->name('user.result');
+    Route::any('results', [userIndexController::class, 'results'])->name('user.results');
 });

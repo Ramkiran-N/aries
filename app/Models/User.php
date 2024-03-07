@@ -22,23 +22,27 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+    public function result()
+    {
+        return $this->hasOne(Result::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    // protected $hidden = [
+    //     'password',
+    //     'remember_token',
+    // ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // /**
+    //  * The attributes that should be cast.
+    //  *
+    //  * @var array<string, string>
+    //  */
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 }

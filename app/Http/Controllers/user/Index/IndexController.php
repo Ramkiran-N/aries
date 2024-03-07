@@ -31,7 +31,12 @@ class IndexController extends Controller
     }
     public function result($email)
     {
-        $res = $this->service->result(session()->get($email));
+        $res = $this->service->result($email);
         return view('user.result',['data'=>$res]);
+    }
+    public function results()
+    {
+        $res = $this->service->results();
+        return view('user.results',['data'=>$res]);
     }
 }
